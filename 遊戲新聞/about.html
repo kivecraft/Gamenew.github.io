@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>關於｜遊戲新聞站</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">遊戲新聞站</a>
+    <nav>
+        <a href="index.html.html">首頁</a>
+        <a href="index02.html" >新聞</a>
+        <a href="about.html" class="active">關於</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>關於本站</h1>
+
+    <p>
+        本站是一個以遊戲相關資訊為主的新聞網站，內容涵蓋遊戲新作消息、
+        更新情報、活動整理以及個人觀點分享。
+    </p>
+
+    <p>
+        建立這個網站的目的，是希望透過整理與撰寫遊戲新聞，
+        練習資料蒐集、內容整理以及網頁設計相關的能力。
+    </p>
+
+    <p>
+        文章多半來自公開資訊與官方消息，並搭配個人理解進行整理，
+        若有錯誤或需要補充的地方，也會持續修正與更新。
+    </p>
+
+    <button id="contactBtn">聯絡我</button>
+    
+
+    <p id="contactText" class="hidden">
+    聯絡 Email：
+    <a href="https://www.instagram.com/you_ling1007/" id="emailLink">
+        
+    </a>
+</p>
+</main>
+
+<footer class="footer">
+    <p>© 2026 遊戲新聞站</p>
+</footer>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans TC", Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.navbar {
+    background-color: #1e6f8e;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.8;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+    opacity: 1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1e6f8e;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #15566e;
+}
+
+.hidden {
+    display: none;
+    margin-top: 15px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+
+
+</style>
+
+<script src="about.js">
+    const btn = document.getElementById("contactBtn");
+const text = document.getElementById("contactText");
+
+document.getElementById("contactBtn").addEventListener("click", function () {
+    alert("有點到！");
+});
+
+</script>
+<script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+  background: radial-gradient(circle at top, #1a1a2e, #0b0b0f);
+  color: #eaeaea;
+}
+
+
+
+
+
+
+/* ===== 導覽列 ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #358ab7cc;
+  backdrop-filter: blur(8px);
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 6px 14px;
+  background: lab(26.1% 46.71 35.33 / 0.874);
+  border-radius: 4px;
+  color: hwb(216 16% 31%);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar h1 {
+  font-size: 22px;
+  color: #fff;
+}
+
+.navbar a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: hsl(98, 91%, 65%);
+}
+
+/* ===== Hero 區 ===== */
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+/* ===== 新聞區 ===== */
+.news-list {
+  max-width: 1200px;
+  margin: -40px auto 0;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+}
+
+/* ===== 新聞卡片 ===== */
+.card {
+  background: linear-gradient(160deg, #1c1c2b, #12121a);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(168, 85, 247, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(168, 85, 247, 0.35);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card p {
+  font-size: 14px;
+  color: #bdbdbd;
+  margin-bottom: 16px;
+}
+
+/* ===== 閱讀更多按鈕 ===== */
+.card a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 80px;
+  padding: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===== RWD ===== */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+}
